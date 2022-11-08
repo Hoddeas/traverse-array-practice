@@ -7,7 +7,7 @@ for (let i = 0; i < results.length; i++) {
         amountOfYes++;
     } else if (results[i] === "No") {
         amountOfNo++;
-    } else if (results[i] === "Maybe") {
+    } else {
         amountOfMaybe++;
     };
 };
@@ -17,10 +17,10 @@ let ages = [18, 12, 24, 13, 52, 34, 28, 9, 16, 15, 30, 50];
 let agesUnder18 = 0;
 let ages18AndOver = 0;
 for (let i = 0; i < results.length; i++) {
-    if (ages[i] <= 18) {
-        ages18AndOver++;
-    } else {
+    if (ages[i] < 18) {
         agesUnder18++;
+    } else {
+        ages18AndOver++;
     };
 };
 console.log(`Ages 18 and over: ${ages18AndOver}, Ages under 18: ${agesUnder18}`);
@@ -34,9 +34,9 @@ let products50OrHigher = 0;
 for (let i = 0; i < prices.length; i++) {
     if (prices[i] < 20) {
         productsUnder20++;
-    } else if (prices[i] >= 20 && prices[i] <= 49) {
+    } else if (prices[i] <= 49) {
         productsBetween20And49++;
-    } else if (prices[i] > 50) {
+    } else {
         products50OrHigher++;
     };
 };
